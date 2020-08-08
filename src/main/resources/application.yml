@@ -1,0 +1,25 @@
+# Spring properties
+spring:
+  application:
+     name: demo  # Service registers under this name
+
+cron:
+  component:
+    identifier:
+      reg-ex: 0 0/60 * * * ?
+
+# HTTP Server
+server:
+  port: 8080  # HTTP (Tomcat) port
+  undertow: 
+    accesslog: 
+      enabled: true
+
+# Logging configurations
+logging:
+  level:
+    root: INFO
+    com.memorynotfound: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.hibernate.SQL: WARN
